@@ -9,6 +9,6 @@ function* generator(z) {
 }
 
 let g = generator(999);
-console.log(g.next().value); // 1001
-console.log(g.next("hello", "second ignored parameter").value); // hello world!
+console.log(g.next().value); // 1000
+console.log(g.next("hello", "second parameter").value); // hello world!
 console.log(g.next(10).value); // 20
