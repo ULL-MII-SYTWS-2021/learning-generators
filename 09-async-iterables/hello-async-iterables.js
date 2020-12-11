@@ -19,49 +19,50 @@ const range = {
     from: 2,
     to: 10,
     [Symbol.asyncIterator]() {
-       return {
-           current: this.from,
-           last: this.to,
-           next() {
-               return new Promise(resolve => {
-                let aux = () => {
-                    if (this.current <= this.last) 
-                      resolve({ done: false, value: this.current++ })
-                    else 
-                      resolve({ done: true })
-        
-                  };
-                  setTimeout(resolve => aux(resolve), 100)
-            }); // (3)
-           }
-       }
+        return {
+            current: this.from,
+            last: this.to,
+            next() {
+                return new Promise(resolve => {
+                    let aux = () => {
+                        if (this.current <= this.last)
+                            resolve({ done: false, value: this.current++ })
+                        else
+                            resolve({ done: true })
+
+                    };
+                    setTimeout(resolve => aux(resolve), 100)
+                }); // (3)
+            }
+        }
     }
 };
 
-/* Iterate manually.
-   See: https://exploringjs.com/impatient-js/ch_async-iteration.html#using-async-iteration-directly
-*/
 
-let asyncIterator = range[Symbol.asyncIterator]();
+const doItManually = false;
 
-function manually() {
+if (doItManually) {
+    /* Iterate manually.
+     See: https://exploringjs.com/impatient-js/ch_async-iteration.html#using-async-iteration-directly
+    */
+    let asyncIterator = range[Symbol.asyncIterator]();
+    function manually() {
         asyncIterator.next().then(r => {
             console.log(r);
             if (!r.done) {
                 asyncIterator.next();
                 manually();
             }
-        });    
-} 
-
-manually();
-
-/* Iterate with for await loop */
-
-/*
-(async () => {
-    for await (let val of range) {
-        console.log(val);
+        });
     }
-})()
-*/
+    manually();
+}
+else {
+    /* Iterate with for await loop */
+    (async () => {
+        for await (let val of range) {
+            console.log(val);
+        }
+    })()
+}
+
