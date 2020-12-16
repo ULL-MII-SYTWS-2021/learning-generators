@@ -5,7 +5,7 @@
   "type": "module",
   "main": "eloquent-js-6-2-group-with-generators.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node main-eloquent-js-6-2-group-with-generators.js"
   },
   "keywords": [],
   "author": "",
