@@ -1,5 +1,10 @@
 # About ES6 Modules in Node.JS
 
+This folder contains an example of the use of modules in Node.JS. See the files:
+
+1. ES6 Module: `eloquent-js-6-2-group-with-generators.js`
+2. Client progrma `main-eloquent-js-6-2-group-with-generators.js`
+
 I am using (2020) a node.js version:
 
 ```
@@ -15,7 +20,7 @@ Authors can tell Node.js to treat JavaScript code as **ECMAScript** modules via
 2. the nearest `package.json` `"type"` field with a value of `"module"`, (as in this example) or 
 3. the `--input-type=module` flag. 
 
-Package authors should include the `"type"` field, even in packages where all sources are `CommonJS`. 
+**Package authors should include the `"type"` field, even in packages where all sources are `CommonJS`**. 
 
 Being explicit about the type of the package will future-proof the package in case the default type of Node.js ever changes, and it will also make things easier for build tools and loaders to determine how the files in the package should be interpreted.
 
