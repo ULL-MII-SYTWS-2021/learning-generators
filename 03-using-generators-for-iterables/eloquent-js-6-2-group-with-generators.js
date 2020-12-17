@@ -2,16 +2,16 @@
 
 class Group {
   constructor() {
-    this.list = [];
+    this.members = [];
   }
   add(elt) {
-    if (!this.has(elt)) this.list.push(elt);
+    if (!this.has(elt)) this.members.push(elt);
   }
   delete(elt) {
-    if (this.has(elt)) this.list.splice(this.list.indexOf(elt), 1);
+    if (this.has(elt)) this.members.splice(this.members.indexOf(elt), 1);
   }
   has(elt) {
-    return this.list.indexOf(elt) !== -1;
+    return this.members.indexOf(elt) !== -1;
   }
   static from(iterable) {
     let result = new Group();
@@ -21,8 +21,8 @@ class Group {
     return result;
   }
   *[Symbol.iterator] () {
-    for (let i = 0; i < this.list.length; i++) {
-      yield this.list[i];
+    for (let i = 0; i < this.members.length; i++) {
+      yield this.members[i];
     }
   }
 }
