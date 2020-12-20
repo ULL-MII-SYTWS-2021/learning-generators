@@ -13,10 +13,11 @@ function* composed() {
     yield* mygen('a'.charCodeAt(0),'z'.charCodeAt(0))
 }
 
-String.prototype.char = function(i) { return [...this][i]; }
-
-console.log([...composed()].map(code => String.fromCharCode(code)).join(''));
-
+let res = [...composed()]
+          .map(code => String.fromCharCode(code))
+          .join('');
+console.log(res);
+// 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 
 let str = '';
 
