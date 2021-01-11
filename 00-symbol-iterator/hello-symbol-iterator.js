@@ -17,7 +17,7 @@ const range = {
     
 }
 
-console.log(range.hello)
+console.log(range.hello); // world!
 
 for (let e of range) {
     console.log(e);
