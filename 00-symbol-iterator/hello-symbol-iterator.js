@@ -19,6 +19,17 @@ const range = {
 
 console.log(range.hello); // world!
 
+console.log("for ... of ...")
 for (let e of range) {
     console.log(e);
+}
+
+console.log("Explicitly:");
+
+let iterator = range[Symbol.iterator]();
+
+while (true) {
+  let result = iterator.next();
+  if (result.done) break;
+  console.log(result.value); // outputs characters one by one
 }
