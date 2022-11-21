@@ -13,6 +13,12 @@ class Group {
   has(elt) {
     return this.members.indexOf(elt) !== -1;
   }
+
+  /**
+   * 
+   * @param {*} iterable 
+   * @returns {Group}
+   */
   static from(iterable) {
     let result = new Group();
     for (const elt of iterable) {
