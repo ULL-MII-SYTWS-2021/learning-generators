@@ -1,7 +1,9 @@
 const z = "hello";
+const w = Symbol();
 const range = {
     from: 4,
     to: 10,
+    [w]: "hello",
     [z]: "world!", // See how it works the [] notation inside an object
     [Symbol.iterator]: function() {
         return {
@@ -18,6 +20,7 @@ const range = {
 }
 
 console.log(range.hello); // world!
+console.log(range[w]); // range.w does not work!
 
 console.log("for ... of ...")
 for (let e of range) {
