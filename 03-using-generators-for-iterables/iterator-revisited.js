@@ -9,4 +9,7 @@ let range = {
 }
 
 console.log(range[Symbol.iterator]);
+for(let r of range) {
+    console.log(r);
+}
 console.log(...range)

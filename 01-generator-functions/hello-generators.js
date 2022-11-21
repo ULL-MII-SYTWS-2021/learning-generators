@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 function* yes() {
     yield 1;
     yield 2;

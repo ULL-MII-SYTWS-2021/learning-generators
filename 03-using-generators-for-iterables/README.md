@@ -3,7 +3,7 @@
 This folder contains an example of the use of modules in Node.JS. See the files:
 
 1. ES6 Module: `eloquent-js-6-2-group-with-generators.js`
-2. Client progrma `main-eloquent-js-6-2-group-with-generators.js`
+2. Client program `main-eloquent-js-6-2-group-with-generators.js`
 
 I am using (2020) a node.js version:
 
