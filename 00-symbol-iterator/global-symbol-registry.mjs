@@ -1,7 +1,9 @@
 /*
 There is also a global symbol registry. 
-Creating a symbol using Symbol.for() adds a symbol to a global registry, keyed by the symbol's description. 
-In other words, if you create two symbols with the same description using Symbol.for(), the two symbols will be equal.
+Creating a symbol using Symbol.for() adds a symbol to a global registry, 
+keyed by the symbol's description. 
+In other words, if you create two symbols with the same description using Symbol.for(), 
+the two symbols will be equal.
 */
 
 const symbol1 = Symbol.for('test');
