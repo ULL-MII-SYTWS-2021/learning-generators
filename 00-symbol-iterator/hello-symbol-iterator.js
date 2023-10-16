@@ -1,5 +1,5 @@
 const z = "hello";
-const w = Symbol(); //Symbols can be used as object keys. Symbols can be used as object keys. No two symbols are ever equal.
+const w = Symbol(); // Symbols can be used as object keys. No two symbols are ever equal.
 console.log(w); // Symbol()
 const range = {
     from: 4,
