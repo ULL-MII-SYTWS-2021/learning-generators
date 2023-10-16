@@ -1,6 +1,6 @@
 const z = "hello";
 const w = Symbol(); //Symbols can be used as object keys. Symbols can be used as object keys. No two symbols are ever equal.
-console.log(typeof w); // Symbol()
+console.log(w); // Symbol()
 const range = {
     from: 4,
     to: 10,
@@ -25,7 +25,9 @@ console.log(range[w]); // range.w does not work!
 
 console.log("for ... of ...")
 for (let e of range) {
-    console.log(e);
+    for(let e2 of range) {
+        console.log(e, e2);
+    }
 }
 
 console.log("Explicitly:");
