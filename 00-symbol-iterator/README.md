@@ -8,19 +8,21 @@ Read [A Practical Guide to Symbols in JavaScript](https://thecodebarbarian.com/a
 
 ## Summary of Symbols
 
-Objects that can be used in `for..of` are called iterable.
+- Objects that can be used in `for..of` are called **iterables**.
 
-Technically, iterables must implement the method named `Symbol.iterator`.
+- Iterables must implement the method named `Symbol.iterator`.
 
-The result of `obj[Symbol.iterator]()` is called an *iterator*. It handles further iteration process.
+- The result of `obj[Symbol.iterator]()` is called an **iterator**. It handles further iteration process.
 
-An iterator must have the method named `next()` that returns an object `{done: Boolean, value: any}`, here `done:true` denotes the end of the iteration process, otherwise the value is the next `value`.
+- An iterator must have the method named `next()` that returns an object 
+  - `{done: Boolean, value: any}`, here `done:true` denotes the end of the iteration process, 
+  - otherwise the value is the **next** `value`.
 
-The `Symbol.iterator` method is called automatically by `for..of`, but we also can do it directly.
+- The `Symbol.iterator` method is called automatically by `for..of`, but we also can do it directly.
 
-Built-in iterables like strings or arrays, also implement `Symbol.iterator`.
+- Built-in iterables like strings or arrays, also implement `Symbol.iterator`.
 
-String iterator knows about surrogate pairs.
+- String iterator knows about surrogate pairs.
 
 Objects that have indexed properties and `length` are called *array-like*. Such objects may also have other properties and methods, but lack the built-in methods of arrays.
 
