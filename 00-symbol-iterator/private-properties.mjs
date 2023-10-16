@@ -1,9 +1,11 @@
 /*
-Since no two symbols are ever equal, symbols are a convenient way to simulate private properties in JavaScript. 
+Since no two symbols are ever equal, 
+symbols are a convenient way to simulate private properties in JavaScript. 
 
 Symbols don't show up in Object.keys(), and therefore, 
 unless you explicitly export a symbol, 
-no other code can access that property unless you explicitly go through the `Object.getOwnPropertySymbols()` 
+no other code can access that property 
+unless you explicitly go through the `Object.getOwnPropertySymbols()` 
 function.
 */
 
@@ -23,5 +25,7 @@ console.log(Object.keys(obj)); // []
 console.log(obj[Symbol('test')]); // undefined
 
 // You can still get a reference to the symbol using `getOwnPropertySymbols()`
-const [symbol] = Object.getOwnPropertySymbols(obj);
+const properties = Object.getOwnPropertySymbols(obj);
+console.log(properties); // [ Symbol(test) ]
+let symbol = properties[0];
 console.log(obj[symbol]); // 'test'
