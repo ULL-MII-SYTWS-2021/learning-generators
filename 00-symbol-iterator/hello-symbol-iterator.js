@@ -25,9 +25,11 @@ console.log(range[w]); // range.w does not work!
 
 console.log("for ... of ...")
 for (let e of range) {
+    process.stdout.write(e+": ")
     for (let e2 of range) {
-        console.log(e, e2);
+        process.stdout.write(e2+" ");
     }
+    console.log();
 }
 
 console.log("Explicitly:");
@@ -37,12 +39,15 @@ let iterator = range[Symbol.iterator]();
 while (true) {
     let result = iterator.next();
     if (result.done) break;
-    console.log(result.value);
+    process.stdout.write(result.value+" ");
 }
+console.log();
 
 // Infinite iterators are also possible.
+console.log("Infinite iterator:");
 range.to = Infinity;
 for (const i of range) {
-    console.log(i);
+    process.stdout.write(i+" ");
     if (i >= 12) break;
 }
+console.log(" ...");
