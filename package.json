@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "git ci -am reading && git push"
+    "save": "git ci -am reading && git push",
+    "00-symbol-iterator/hello-symbol-iterator.js": "node 00-symbol-iterator/hello-symbol-iterator.js"
   },
   "keywords": [],
   "author": "",
