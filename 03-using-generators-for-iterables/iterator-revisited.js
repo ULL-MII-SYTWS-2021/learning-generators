@@ -10,7 +10,7 @@ let range = {
     }
 }
 
-console.log(range[Symbol.iterator]);
+console.log(range[Symbol.iterator],"for ... of:");
 for(let r of range) {
   process.stdout.write(r+" ");
 }
