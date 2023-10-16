@@ -10,7 +10,7 @@ For that, so called "seeded pseudo-random generators" are used. They take a "see
 
 An example of such formula, that generates somewhat uniformly distributed values:
 
-```
+```js
 next = previous * 16807 % 2147483647
 ```
 
