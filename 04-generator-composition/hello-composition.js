@@ -1,5 +1,5 @@
 // The yield* directive delegates the execution to another generator. 
-// This term means that yield* gen iterates over the generator gen 
+// This term means that `yield* gen` iterates over the generator `gen` 
 // and transparently forwards its yields outside. 
 // As if the values were yielded by the outer generator.
 
