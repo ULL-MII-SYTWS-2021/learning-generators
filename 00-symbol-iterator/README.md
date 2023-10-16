@@ -22,7 +22,7 @@ Read [A Practical Guide to Symbols in JavaScript](https://thecodebarbarian.com/a
 
 - Built-in iterables like strings or arrays, also implement `Symbol.iterator`.
 
-- String iterator knows about surrogate pairs.
+- String iterator knows about surrogate pairs. See my notes on [JS and UTF-16 and Problems Processing Strings](https://ull-esit-pl.netlify.app/temas/expresiones-regulares-y-analisis-lexico/unicode-utf-16-and-js.html#js-and-utf-16-and-problems-processing-strings)
 
 Objects that have indexed properties and `length` are called *array-like*. Such objects may also have other properties and methods, but lack the built-in methods of arrays.
 
