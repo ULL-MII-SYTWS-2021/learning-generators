@@ -1,7 +1,9 @@
+// Here is a version of the example in 00-symbol-iterator/hello-symbol-iterator.js that 
+// uses a generator function to define the iterator 
 let range = {
     from: 2,
     to: 10,
-    *[Symbol.iterator]() {
+    *[Symbol.iterator]() { // // a shorthand for [Symbol.iterator]: function*()
         for(let val = this.from; val <= this.to; val++) {
             yield val;
         }
@@ -10,6 +12,6 @@ let range = {
 
 console.log(range[Symbol.iterator]);
 for(let r of range) {
-    console.log(r);
+  process.stdout.write(r+" ");
 }
-console.log(...range)
+console.log("\nSpread: ",...range)
