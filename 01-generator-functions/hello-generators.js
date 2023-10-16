@@ -7,8 +7,8 @@ function* yes() {
 
 let g = yes();
 console.log(g);
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
+console.log(g.next()); // { value: 1, done: false }
+console.log(g.next()); // { value: 2, done: false }
+console.log(g.next()); // { value: 3, done: true } done is true because there are no more yields!
+console.log(g.next()); // { value: undefined, done: true }
+console.log(g.next()); // { value: undefined, done: true }
