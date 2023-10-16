@@ -1,5 +1,6 @@
 // Here is a version of the example in 00-symbol-iterator/hello-symbol-iterator.js that 
-// uses a generator function to define the iterator 
+// uses a generator function to define the iterator.
+// It is  more concise and keeps the same functionality.
 let range = {
     from: 2,
     to: 10,
