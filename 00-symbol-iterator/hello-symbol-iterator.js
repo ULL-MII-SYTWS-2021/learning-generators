@@ -3,7 +3,7 @@ const w = Symbol(); // Symbols can be used as object keys. No two symbols are ev
 console.log(w); // Symbol()
 const range = {
     from: 4,
-    to: 10,
+    to: 9,
     [w]: "hello",
     [z]: "world!", // See how it works the [] notation inside an object
     [Symbol.iterator]: function () {
@@ -35,7 +35,6 @@ for (let e of range) {
 console.log("Explicitly:");
 
 let iterator = range[Symbol.iterator]();
-
 while (true) {
     let result = iterator.next();
     if (result.done) break;
