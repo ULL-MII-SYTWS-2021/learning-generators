@@ -24,8 +24,8 @@ Read [A Practical Guide to Symbols in JavaScript](https://thecodebarbarian.com/a
 
 - String iterator knows about surrogate pairs. See my notes on [JS and UTF-16 and Problems Processing Strings](https://ull-esit-pl.netlify.app/temas/expresiones-regulares-y-analisis-lexico/unicode-utf-16-and-js.html#js-and-utf-16-and-problems-processing-strings)
 
-Objects that have indexed properties and `length` are called *array-like*. Such objects may also have other properties and methods, but lack the built-in methods of arrays.
+- Objects that have indexed properties and `length` are called *array-like*. Such objects may also have other properties and methods, but lack the built-in methods of arrays.
 
-If we look inside the specification – we’ll see that most built-in methods assume that they work with iterables or array-likes instead of **real** arrays, because that’s more abstract.
+- Most built-in methods assume that they work with iterables or array-likes instead of **real** arrays, because that’s more abstract.
 
-`Array.from(obj[, mapFn, thisArg])` makes a real Array from an iterable or array-like obj, and we can then use array methods on it. The optional arguments `mapFn` and `thisArg` allow us to apply a function to each item.
+- `Array.from(obj[, mapFn, thisArg])` makes a real Array from an iterable or array-like obj, and we can then use array methods on it. The optional arguments `mapFn` and `thisArg` allow us to apply a function to each item.
