@@ -18,6 +18,13 @@ let range = {
 
 for (let num of range) {
     for (let num2 of range) {
-      console.log(num, num2); /* 1 1 1 2 1 3 1 4 1 5  */
+      console.log(num, num2); 
+      /*
+        1 1
+        1 2
+        1 3
+        1 4
+        1 5 
+       */
     }
 }
