@@ -27,7 +27,7 @@ console.log("nested for ... of loops:")
 for (let e of range) {
     process.stdout.write(e+": ")
     range.to = e;
-    for (let e2 of range) {
+    for (let e2 of range) { // The .last of the outer loop is not changed by the inner loop
         process.stdout.write(e2+" ");
     }
     console.log();
