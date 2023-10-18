@@ -23,9 +23,10 @@ const range = {
 console.log(range.hello); // world!
 console.log(range[w]); // range.w does not work!
 
-console.log("for ... of ...")
+console.log("nested for ... of loops:")
 for (let e of range) {
     process.stdout.write(e+": ")
+    range.to = e;
     for (let e2 of range) {
         process.stdout.write(e2+" ");
     }
