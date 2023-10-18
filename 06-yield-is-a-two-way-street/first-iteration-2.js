@@ -1,4 +1,4 @@
-function *Gen() {
+function* Gen() {
   var input1 = yield 'output1'
   return input1
 }
